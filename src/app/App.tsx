@@ -2,8 +2,11 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Github, Linkedin, Mail, ArrowRight, Terminal, Database, Cpu, Network } from "lucide-react";
 import { ThemeToggle } from "./components/ThemeToggle";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 
 export default function App() {
+  const { t } = useTranslation();
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
@@ -21,7 +24,11 @@ export default function App() {
 
   return (
     <div className={`${isDark ? "dark" : ""} min-h-screen bg-background text-foreground transition-colors duration-300`}>
-      <ThemeToggle isDark={isDark} onToggle={toggleTheme} />
+      {/* Fixed Header Controls */}
+      <div className="fixed top-6 right-6 z-50 flex items-center gap-4">
+        <LanguageSwitcher />
+        <ThemeToggle isDark={isDark} onToggle={toggleTheme} />
+      </div>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -68,7 +75,7 @@ class DistributedSystem {
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           >
             <p className="text-2xl text-muted-foreground mb-4" style={{ fontSize: '1.5rem' }}>
-              Software Engineer | Backend & High-Performance Systems
+              {t("hero.role")}
             </p>
           </motion.div>
 
@@ -78,7 +85,7 @@ class DistributedSystem {
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           >
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12" style={{ fontSize: '1.25rem' }}>
-              I build scalable systems, APIs, and intelligent solutions powered by AI.
+              {t("hero.description")}
             </p>
           </motion.div>
 
@@ -93,7 +100,7 @@ class DistributedSystem {
               className="px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors inline-flex items-center gap-2"
               style={{ borderRadius: '0.5rem' }}
             >
-              View Projects
+              {t("hero.buttons.projects")}
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
@@ -101,7 +108,7 @@ class DistributedSystem {
               className="px-8 py-4 border border-border hover:bg-accent transition-colors"
               style={{ borderRadius: '0.5rem' }}
             >
-              Contact Me
+              {t("hero.buttons.contact")}
             </a>
           </motion.div>
         </div>
@@ -116,38 +123,40 @@ class DistributedSystem {
             transition={{ duration: 0.8 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <h2 className="text-4xl mb-12" style={{ fontWeight: 600, fontSize: '2.5rem' }}>About</h2>
+            <h2 className="text-4xl mb-12" style={{ fontWeight: 600, fontSize: '2.5rem' }}>
+              {t("about.title")}
+            </h2>
             <div className="space-y-6 text-muted-foreground" style={{ fontSize: '1.125rem', lineHeight: 1.7 }}>
-              <p>
-                Backend-focused Software Engineer with experience in PHP, Python, and modern JavaScript ecosystems.
-                I specialize in building systems that scale, perform, and deliver value.
-              </p>
+              <p>{t("about.description")}</p>
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
                 <div className="flex flex-col items-start">
                   <Cpu className="w-8 h-8 mb-4 text-foreground" />
                   <h3 className="text-foreground mb-2" style={{ fontSize: '1.125rem', fontWeight: 500 }}>
-                    Performance-First
+                    {t("about.cards.performance.title")}
                   </h3>
                   <p style={{ fontSize: '0.938rem' }}>
-                    Optimized systems built for speed and efficiency at scale.
+                    {t("about.cards.performance.description")}
                   </p>
                 </div>
+
                 <div className="flex flex-col items-start">
                   <Network className="w-8 h-8 mb-4 text-foreground" />
                   <h3 className="text-foreground mb-2" style={{ fontSize: '1.125rem', fontWeight: 500 }}>
-                    Distributed Systems
+                    {t("about.cards.distributed.title")}
                   </h3>
                   <p style={{ fontSize: '0.938rem' }}>
-                    Experience with message queues, async processing, and microservices.
+                    {t("about.cards.distributed.description")}
                   </p>
                 </div>
+
                 <div className="flex flex-col items-start">
                   <Terminal className="w-8 h-8 mb-4 text-foreground" />
                   <h3 className="text-foreground mb-2" style={{ fontSize: '1.125rem', fontWeight: 500 }}>
-                    Problem Solver
+                    {t("about.cards.problem_solver.title")}
                   </h3>
                   <p style={{ fontSize: '0.938rem' }}>
-                    Strong analytical mindset focused on elegant, maintainable solutions.
+                    {t("about.cards.problem_solver.description")}
                   </p>
                 </div>
               </div>
@@ -165,15 +174,18 @@ class DistributedSystem {
             transition={{ duration: 0.8 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <h2 className="text-4xl mb-16" style={{ fontWeight: 600, fontSize: '2.5rem' }}>Skills</h2>
+            <h2 className="text-4xl mb-16" style={{ fontWeight: 600, fontSize: '2.5rem' }}>
+              {t("skills.title")}
+            </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {/* Languages */}
               <div>
                 <h3 className="text-xl mb-6 text-muted-foreground" style={{ fontSize: '1.125rem', fontWeight: 500 }}>
-                  Languages
+                  {t("skills.languages.title")}
                 </h3>
                 <div className="flex flex-wrap gap-3">
-                  {["PHP", "Python", "JavaScript", "TypeScript", "C++"].map((skill) => (
+                  {t("skills.languages.items", { returnObjects: true }).map((skill: string) => (
                     <span
                       key={skill}
                       className="px-4 py-2 bg-background border border-border"
@@ -185,12 +197,13 @@ class DistributedSystem {
                 </div>
               </div>
 
+              {/* Frameworks & Tools */}
               <div>
                 <h3 className="text-xl mb-6 text-muted-foreground" style={{ fontSize: '1.125rem', fontWeight: 500 }}>
-                  Frameworks & Tools
+                  {t("skills.frameworks.title")}
                 </h3>
                 <div className="flex flex-wrap gap-3">
-                  {["FastAPI", "Laravel", "CodeIgniter", "React", "Node.js"].map((skill) => (
+                  {t("skills.frameworks.items", { returnObjects: true }).map((skill: string) => (
                     <span
                       key={skill}
                       className="px-4 py-2 bg-background border border-border"
@@ -202,12 +215,13 @@ class DistributedSystem {
                 </div>
               </div>
 
+              {/* Systems & Architecture */}
               <div>
                 <h3 className="text-xl mb-6 text-muted-foreground" style={{ fontSize: '1.125rem', fontWeight: 500 }}>
-                  Systems & Architecture
+                  {t("skills.systems.title")}
                 </h3>
                 <div className="flex flex-wrap gap-3">
-                  {["REST APIs", "Microservices", "Async Processing", "Message Queues"].map((skill) => (
+                  {t("skills.systems.items", { returnObjects: true }).map((skill: string) => (
                     <span
                       key={skill}
                       className="px-4 py-2 bg-background border border-border"
@@ -219,12 +233,13 @@ class DistributedSystem {
                 </div>
               </div>
 
+              {/* Databases */}
               <div>
                 <h3 className="text-xl mb-6 text-muted-foreground" style={{ fontSize: '1.125rem', fontWeight: 500 }}>
-                  Databases
+                  {t("skills.databases.title")}
                 </h3>
                 <div className="flex flex-wrap gap-3">
-                  {["PostgreSQL", "MySQL", "Redis"].map((skill) => (
+                  {t("skills.databases.items", { returnObjects: true }).map((skill: string) => (
                     <span
                       key={skill}
                       className="px-4 py-2 bg-background border border-border"
@@ -236,12 +251,13 @@ class DistributedSystem {
                 </div>
               </div>
 
+              {/* DevOps - spans 2 columns */}
               <div className="md:col-span-2">
                 <h3 className="text-xl mb-6 text-muted-foreground" style={{ fontSize: '1.125rem', fontWeight: 500 }}>
-                  DevOps
+                  {t("skills.devops.title")}
                 </h3>
                 <div className="flex flex-wrap gap-3">
-                  {["Docker", "Linux", "Nginx"].map((skill) => (
+                  {t("skills.devops.items", { returnObjects: true }).map((skill: string) => (
                     <span
                       key={skill}
                       className="px-4 py-2 bg-background border border-border"
@@ -266,9 +282,11 @@ class DistributedSystem {
             transition={{ duration: 0.8 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <h2 className="text-4xl mb-4" style={{ fontWeight: 600, fontSize: '2.5rem' }}>Featured Project</h2>
+            <h2 className="text-4xl mb-4" style={{ fontWeight: 600, fontSize: '2.5rem' }}>
+              {t("projects.featured.title")}
+            </h2>
             <p className="text-muted-foreground mb-16" style={{ fontSize: '1.125rem' }}>
-              End-to-end system architecture and AI integration
+              {t("projects.featured.subtitle")}
             </p>
 
             <motion.div
@@ -279,43 +297,32 @@ class DistributedSystem {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
                   <h3 className="text-3xl mb-6" style={{ fontWeight: 600, fontSize: '2rem' }}>
-                    Deepfake Detection System
+                    {t("projects.featured.name")}
                   </h3>
                   <p className="text-muted-foreground mb-8" style={{ fontSize: '1.125rem', lineHeight: 1.7 }}>
-                    End-to-end AI system for detecting deepfakes in images and videos. Built with scalability
-                    and performance as core requirements, handling asynchronous processing and distributed workloads.
+                    {t("projects.featured.description")}
                   </p>
 
                   <div className="mb-8">
                     <h4 className="text-foreground mb-4" style={{ fontSize: '1rem', fontWeight: 500 }}>
-                      Key Features
+                      {t("projects.featured.key_features")}
                     </h4>
                     <ul className="space-y-3 text-muted-foreground" style={{ fontSize: '0.938rem' }}>
-                      <li className="flex items-start gap-3">
-                        <span className="text-foreground mt-1">•</span>
-                        <span>Asynchronous processing pipeline with Celery and Redis</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-foreground mt-1">•</span>
-                        <span>Scalable architecture supporting concurrent analysis requests</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-foreground mt-1">•</span>
-                        <span>EfficientNet-based AI model integration for real-time detection</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-foreground mt-1">•</span>
-                        <span>REST API built with FastAPI for high-throughput operations</span>
-                      </li>
+                      {t("projects.featured.features", { returnObjects: true }).map((feature: string, index: number) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <span className="text-foreground mt-1">•</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
                   <div>
                     <h4 className="text-foreground mb-4" style={{ fontSize: '1rem', fontWeight: 500 }}>
-                      Technology Stack
+                      {t("projects.featured.tech_stack")}
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {["FastAPI", "Celery", "Redis", "PostgreSQL", "EfficientNet", "Docker"].map((tech) => (
+                      {t("projects.featured.technologies", { returnObjects: true }).map((tech: string) => (
                         <span
                           key={tech}
                           className="px-3 py-1 bg-background border border-border"
@@ -370,7 +377,9 @@ class DistributedSystem {
             transition={{ duration: 0.8 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <h2 className="text-4xl mb-16" style={{ fontWeight: 600, fontSize: '2.5rem' }}>Other Projects</h2>
+            <h2 className="text-4xl mb-16" style={{ fontWeight: 600, fontSize: '2.5rem' }}>
+              {t("projects.other.title")}
+            </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
@@ -379,11 +388,10 @@ class DistributedSystem {
                 transition={{ duration: 0.3 }}
               >
                 <h3 className="text-2xl mb-4" style={{ fontWeight: 600, fontSize: '1.5rem' }}>
-                  Micro SaaS Platform
+                  {t("projects.other.micro_saas.title")}
                 </h3>
                 <p className="text-muted-foreground mb-6" style={{ fontSize: '1rem', lineHeight: 1.6 }}>
-                  Trend tracking system for content creators. Real-time analytics and insights
-                  for social media performance optimization.
+                  {t("projects.other.micro_saas.description")}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {["Laravel", "Vue.js", "MySQL", "Redis"].map((tech) => (
@@ -404,11 +412,10 @@ class DistributedSystem {
                 transition={{ duration: 0.3 }}
               >
                 <h3 className="text-2xl mb-4" style={{ fontWeight: 600, fontSize: '1.5rem' }}>
-                  Enterprise Web Systems
+                  {t("projects.other.enterprise.title")}
                 </h3>
                 <p className="text-muted-foreground mb-6" style={{ fontSize: '1rem', lineHeight: 1.6 }}>
-                  Custom web platforms and APIs for enterprise clients. Focus on performance,
-                  security, and maintainable architecture.
+                  {t("projects.other.enterprise.description")}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {["PHP", "CodeIgniter", "PostgreSQL", "Docker"].map((tech) => (
@@ -429,11 +436,10 @@ class DistributedSystem {
                 transition={{ duration: 0.3 }}
               >
                 <h3 className="text-2xl mb-4" style={{ fontWeight: 600, fontSize: '1.5rem' }}>
-                  API Integration Platform
+                  {t("projects.other.api_integration.title")}
                 </h3>
                 <p className="text-muted-foreground mb-6" style={{ fontSize: '1rem', lineHeight: 1.6 }}>
-                  RESTful API gateway connecting multiple third-party services. Implements
-                  rate limiting, caching, and error handling strategies.
+                  {t("projects.other.api_integration.description")}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {["Node.js", "Express", "Redis", "MongoDB"].map((tech) => (
@@ -454,11 +460,10 @@ class DistributedSystem {
                 transition={{ duration: 0.3 }}
               >
                 <h3 className="text-2xl mb-4" style={{ fontWeight: 600, fontSize: '1.5rem' }}>
-                  Data Processing Pipeline
+                  {t("projects.other.data_pipeline.title")}
                 </h3>
                 <p className="text-muted-foreground mb-6" style={{ fontSize: '1rem', lineHeight: 1.6 }}>
-                  High-throughput data processing system handling millions of records.
-                  Batch processing with robust error recovery and monitoring.
+                  {t("projects.other.data_pipeline.description")}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {["Python", "Celery", "PostgreSQL", "RabbitMQ"].map((tech) => (
@@ -487,43 +492,43 @@ class DistributedSystem {
             viewport={{ once: true, margin: "-100px" }}
           >
             <h2 className="text-4xl mb-16" style={{ fontWeight: 600, fontSize: '2.5rem' }}>
-              How I Build Systems
+              {t("engineering.title")}
             </h2>
 
             <div className="space-y-12">
               <div className="border-l-2 border-foreground pl-8">
                 <h3 className="text-2xl mb-4" style={{ fontWeight: 600, fontSize: '1.5rem' }}>
-                  Clean Architecture
+                  {t("engineering.clean_architecture.title")}
                 </h3>
                 <p className="text-muted-foreground" style={{ fontSize: '1.125rem', lineHeight: 1.7 }}>
-                  Separation of concerns, modular design, and maintainable code that scales with team and product growth.
+                  {t("engineering.clean_architecture.description")}
                 </p>
               </div>
 
               <div className="border-l-2 border-foreground pl-8">
                 <h3 className="text-2xl mb-4" style={{ fontWeight: 600, fontSize: '1.5rem' }}>
-                  Performance-First Mindset
+                  {t("engineering.performance.title")}
                 </h3>
                 <p className="text-muted-foreground" style={{ fontSize: '1.125rem', lineHeight: 1.7 }}>
-                  Optimization at every layer—from database queries to caching strategies to algorithm selection.
+                  {t("engineering.performance.description")}
                 </p>
               </div>
 
               <div className="border-l-2 border-foreground pl-8">
                 <h3 className="text-2xl mb-4" style={{ fontWeight: 600, fontSize: '1.5rem' }}>
-                  Scalable Backend Design
+                  {t("engineering.scalable.title")}
                 </h3>
                 <p className="text-muted-foreground" style={{ fontSize: '1.125rem', lineHeight: 1.7 }}>
-                  Systems built to handle growth—horizontal scaling, load balancing, and distributed architecture patterns.
+                  {t("engineering.scalable.description")}
                 </p>
               </div>
 
               <div className="border-l-2 border-foreground pl-8">
                 <h3 className="text-2xl mb-4" style={{ fontWeight: 600, fontSize: '1.5rem' }}>
-                  Async & Distributed Processing
+                  {t("engineering.async.title")}
                 </h3>
                 <p className="text-muted-foreground" style={{ fontSize: '1.125rem', lineHeight: 1.7 }}>
-                  Leveraging message queues, worker pools, and event-driven architecture for responsive, resilient systems.
+                  {t("engineering.async.description")}
                 </p>
               </div>
             </div>
@@ -541,10 +546,10 @@ class DistributedSystem {
             viewport={{ once: true, margin: "-100px" }}
           >
             <h2 className="text-4xl mb-6" style={{ fontWeight: 600, fontSize: '2.5rem' }}>
-              Let's Build Something Impactful
+              {t("contact.title")}
             </h2>
             <p className="text-muted-foreground mb-12 text-xl" style={{ fontSize: '1.25rem' }}>
-              Open to new opportunities and collaborations
+              {t("contact.subtitle")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -584,7 +589,7 @@ class DistributedSystem {
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-border">
         <div className="max-w-6xl mx-auto text-center text-muted-foreground" style={{ fontSize: '0.938rem' }}>
-          <p>© 2026 Leandro Ventura. Built with precision and purpose.</p>
+          <p>{t("footer.copyright")}</p>
         </div>
       </footer>
     </div>

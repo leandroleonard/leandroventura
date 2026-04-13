@@ -11,7 +11,7 @@ export function ThemeToggle({ isDark, onToggle }: ThemeToggleProps) {
     <motion.button
       onClick={onToggle}
       className="fixed top-8 right-8 z-50 p-3 border border-border bg-background hover:bg-accent transition-colors"
-      style={{ borderRadius: '0.5rem' }}
+      style={{ borderRadius: '0.5rem', cursor: 'pointer' }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       aria-label="Toggle theme"
