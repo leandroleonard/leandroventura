@@ -33,11 +33,11 @@
     },
     "frameworks": {
       "title": "Frameworks & Tools",
-      "items": ["FastAPI", "Laravel", "CodeIgniter", "React", "Node.js"]
+      "items": ["Laravel", "FastAPI", "CodeIgniter", "React", "Next.js", "React Native", "Node.js"]
     },
     "systems": {
       "title": "Systems & Architecture",
-      "items": ["REST APIs", "Microservices", "Async Processing", "Message Queues"]
+      "items": ["REST APIs", "MVC", "Microservices", "Async Processing", "Message Queues"]
     },
     "databases": {
       "title": "Databases",
