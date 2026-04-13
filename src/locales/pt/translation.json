@@ -1,0 +1,113 @@
+{
+  "hero": {
+    "role": "Engenheiro de Software | Backend & Sistemas de Alta Performance",
+    "description": "Construo sistemas escaláveis, APIs e soluções inteligentes alimentadas por IA.",
+    "buttons": {
+      "projects": "Ver Projetos",
+      "contact": "Contactar-me"
+    }
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Engenheiro de Software focado em Backend com experiência em PHP, Python e ecossistemas modernos de JavaScript. Especializo-me na construção de sistemas que escalam, performam e entregam valor real.",
+    "cards": {
+      "performance": {
+        "title": "Performance-First",
+        "description": "Sistemas otimizados construídos para velocidade e eficiência em escala."
+      },
+      "distributed": {
+        "title": "Sistemas Distribuídos",
+        "description": "Experiência com filas de mensagens, processamento assíncrono e microsserviços."
+      },
+      "problem_solver": {
+        "title": "Problem Solver",
+        "description": "Mentalidade analítica forte focada em soluções elegantes e fáceis de manter."
+      }
+    }
+  },
+  "skills": {
+    "title": "Competências",
+    "languages": {
+      "title": "Linguagens",
+      "items": ["PHP", "Python", "JavaScript", "TypeScript", "C++"]
+    },
+    "frameworks": {
+      "title": "Frameworks & Ferramentas",
+      "items": ["FastAPI", "Laravel", "CodeIgniter", "React", "Node.js"]
+    },
+    "systems": {
+      "title": "Sistemas & Arquitetura",
+      "items": ["REST APIs", "Microservices", "Async Processing", "Message Queues"]
+    },
+    "databases": {
+      "title": "Bases de Dados",
+      "items": ["PostgreSQL", "MySQL", "Redis"]
+    },
+    "devops": {
+      "title": "DevOps",
+      "items": ["Docker", "Linux", "Nginx"]
+    }
+  },
+  "projects": {
+    "featured": {
+      "title": "Projeto em Destaque",
+      "subtitle": "Arquitetura de sistema end-to-end e integração com IA",
+      "name": "Deepfake Detection System",
+      "description": "Sistema de IA completo para deteção de deepfakes em imagens e vídeos. Construído com escalabilidade e performance como requisitos principais, suportando processamento assíncrono e cargas distribuídas.",
+      "key_features": "Principais Funcionalidades",
+      "features": [
+        "Pipeline de processamento assíncrono com Celery e Redis",
+        "Arquitetura escalável que suporta pedidos de análise simultâneos",
+        "Integração de modelo de IA baseado em EfficientNet para deteção em tempo real",
+        "API REST construída com FastAPI para operações de alto desempenho"
+      ],
+      "tech_stack": "Stack Tecnológica",
+      "technologies": ["FastAPI", "Celery", "Redis", "PostgreSQL", "EfficientNet", "Docker"]
+    },
+    "other": {
+      "title": "Outros Projetos",
+      "micro_saas": {
+        "title": "Micro SaaS Platform",
+        "description": "Sistema de rastreamento de tendências para criadores de conteúdo. Análises em tempo real e insights para otimização de desempenho nas redes sociais."
+      },
+      "enterprise": {
+        "title": "Enterprise Web Systems",
+        "description": "Plataformas web e APIs personalizadas para clientes empresariais. Foco em performance, segurança e arquitetura sustentável."
+      },
+      "api_integration": {
+        "title": "API Integration Platform",
+        "description": "Gateway de API RESTful que conecta múltiplos serviços de terceiros. Implementa rate limiting, caching e estratégias de tratamento de erros."
+      },
+      "data_pipeline": {
+        "title": "Data Processing Pipeline",
+        "description": "Sistema de processamento de dados de alto desempenho que lida com milhões de registos. Processamento em batch com recuperação robusta de erros e monitorização."
+      }
+    }
+  },
+  "engineering": {
+    "title": "Como Construo Sistemas",
+    "clean_architecture": {
+      "title": "Clean Architecture",
+      "description": "Separação de responsabilidades, design modular e código sustentável que escala com a equipa e o produto."
+    },
+    "performance": {
+      "title": "Mentalidade Performance-First",
+      "description": "Otimização em todas as camadas — desde queries na base de dados até estratégias de caching e escolha de algoritmos."
+    },
+    "scalable": {
+      "title": "Design de Backend Escalável",
+      "description": "Sistemas construídos para crescer — escalabilidade horizontal, balanceamento de carga e padrões de arquitetura distribuída."
+    },
+    "async": {
+      "title": "Processamento Assíncrono & Distribuído",
+      "description": "Uso de filas de mensagens, pools de workers e arquitetura orientada a eventos para sistemas responsivos e resilientes."
+    }
+  },
+  "contact": {
+    "title": "Vamos Construir Algo Impactante",
+    "subtitle": "Aberto a novas oportunidades e colaborações"
+  },
+  "footer": {
+    "copyright": "© 2026 Leandro Ventura. Construído com precisão e propósito."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "hero": {
+    "role": "Software Engineer | Backend & High-Performance Systems",
+    "description": "I build scalable systems, APIs, and intelligent solutions powered by AI.",
+    "buttons": {
+      "projects": "View Projects",
+      "contact": "Contact Me"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Backend-focused Software Engineer with experience in PHP, Python, and modern JavaScript ecosystems. I specialize in building systems that scale, perform, and deliver real value.",
+    "cards": {
+      "performance": {
+        "title": "Performance-First",
+        "description": "Optimized systems built for speed and efficiency at scale."
+      },
+      "distributed": {
+        "title": "Distributed Systems",
+        "description": "Experience with message queues, async processing, and microservices."
+      },
+      "problem_solver": {
+        "title": "Problem Solver",
+        "description": "Strong analytical mindset focused on elegant, maintainable solutions."
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "languages": {
+      "title": "Languages",
+      "items": ["PHP", "Python", "JavaScript", "TypeScript", "C++"]
+    },
+    "frameworks": {
+      "title": "Frameworks & Tools",
+      "items": ["FastAPI", "Laravel", "CodeIgniter", "React", "Node.js"]
+    },
+    "systems": {
+      "title": "Systems & Architecture",
+      "items": ["REST APIs", "Microservices", "Async Processing", "Message Queues"]
+    },
+    "databases": {
+      "title": "Databases",
+      "items": ["PostgreSQL", "MySQL", "Redis"]
+    },
+    "devops": {
+      "title": "DevOps",
+      "items": ["Docker", "Linux", "Nginx"]
+    }
+  },
+  "projects": {
+    "featured": {
+      "title": "Featured Project",
+      "subtitle": "End-to-end system architecture and AI integration",
+      "name": "Deepfake Detection System",
+      "description": "End-to-end AI system for detecting deepfakes in images and videos. Built with scalability and performance as core requirements, handling asynchronous processing and distributed workloads.",
+      "key_features": "Key Features",
+      "features": [
+        "Asynchronous processing pipeline with Celery and Redis",
+        "Scalable architecture supporting concurrent analysis requests",
+        "EfficientNet-based AI model integration for real-time detection",
+        "REST API built with FastAPI for high-throughput operations"
+      ],
+      "tech_stack": "Technology Stack",
+      "technologies": ["FastAPI", "Celery", "Redis", "PostgreSQL", "EfficientNet", "Docker"]
+    },
+    "other": {
+      "title": "Other Projects",
+      "micro_saas": {
+        "title": "Micro SaaS Platform",
+        "description": "Trend tracking system for content creators. Real-time analytics and insights for social media performance optimization."
+      },
+      "enterprise": {
+        "title": "Enterprise Web Systems",
+        "description": "Custom web platforms and APIs for enterprise clients. Focus on performance, security, and maintainable architecture."
+      },
+      "api_integration": {
+        "title": "API Integration Platform",
+        "description": "RESTful API gateway connecting multiple third-party services. Implements rate limiting, caching, and error handling strategies."
+      },
+      "data_pipeline": {
+        "title": "Data Processing Pipeline",
+        "description": "High-throughput data processing system handling millions of records. Batch processing with robust error recovery and monitoring."
+      }
+    }
+  },
+  "engineering": {
+    "title": "How I Build Systems",
+    "clean_architecture": {
+      "title": "Clean Architecture",
+      "description": "Separation of concerns, modular design, and maintainable code that scales with team and product growth."
+    },
+    "performance": {
+      "title": "Performance-First Mindset",
+      "description": "Optimization at every layer—from database queries to caching strategies to algorithm selection."
+    },
+    "scalable": {
+      "title": "Scalable Backend Design",
+      "description": "Systems built to handle growth—horizontal scaling, load balancing, and distributed architecture patterns."
+    },
+    "async": {
+      "title": "Async & Distributed Processing",
+      "description": "Leveraging message queues, worker pools, and event-driven architecture for responsive, resilient systems."
+    }
+  },
+  "contact": {
+    "title": "Let's Build Something Impactful",
+    "subtitle": "Open to new opportunities and collaborations"
+  },
+  "footer": {
+    "copyright": "© 2026 Leandro Ventura. Built with precision and purpose."
+  }
+}
