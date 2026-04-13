@@ -9,7 +9,7 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "description": "Engenheiro de Software focado em Backend com experiência em PHP, Python e ecossistemas modernos de JavaScript. Especializo-me na construção de sistemas que escalam, performam e entregam valor real.",
+    "description": "Engenheiro de Software focado em Backend com experiência em PHP, Python e ecossistemas modernos de JavaScript. Especialista na construção de sistemas que escalam, performam e entregam valor real.",
     "cards": {
       "performance": {
         "title": "Performance-First",
@@ -40,8 +40,8 @@
     "frameworks": {
       "title": "Frameworks & Ferramentas",
       "items": [
-        "FastAPI",
         "Laravel",
+        "FastAPI",
         "CodeIgniter",
         "React",
         "Node.js"
@@ -81,7 +81,7 @@
         "location": "Minas Gerais, Brasil",
         "role": "Mid. Software Developer",
         "period": "Maio 2024 - Presente",
-        "description": "Garantir a estabilidade de um sistema de pagamentos que processa mais de um milhão de registos por mês, otimizando queries e melhorando a confiabilidade da base de dados.",
+        "description": "Garanti a estabilidade de um sistema de pagamentos que processa mais de um milhão de registos por mês, otimizando queries e melhorando a confiabilidade da base de dados.",
         "achievements": [
           "Otimizei queries complexas, reduzindo o tempo de resposta em até 80% e melhorando significativamente o desempenho do sistema.",
           "Desenvolvi integrações de webhook para listagem automática de transações, garantindo sincronização em tempo real e eliminando erros manuais.",
@@ -96,7 +96,7 @@
         "period": "Março 2023 – Julho 2024",
         "description": "Desenvolvi um sistema completo de agendamento para uma agência de viagens, melhorando a eficiência na gestão de clientes.",
         "achievements": [
-          "Engenhei um sistema full-stack de agendamento usando React e CodeIgniter, reduzindo erros manuais de reservas para mais de 500 utilizadores ativos.",
+          "Desenvolvi um sistema full-stack de agendamento usando React e CodeIgniter, reduzindo erros manuais de reservas para mais de 500 utilizadores ativos.",
           "Desenhei e desenvolvi interfaces focadas no utilizador, melhorando a UX/UI em múltiplas plataformas.",
           "Construí um simulador de crédito em tempo real com React e TypeScript, calculando opções de financiamento dinamicamente e aumentando a taxa de conversão de empréstimos."
         ],
