@@ -194,5 +194,8 @@
   },
   "footer": {
     "copyright": "© 2026 Leandro Ventura. Construído com precisão e propósito."
-  }
+  },
+  "loading": "Carregando...",
+  "post-not-found": "Artigo não encontrado",
+  "go-back": "Voltar"
 }

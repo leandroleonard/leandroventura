@@ -7,9 +7,9 @@ import { useTranslation } from "react-i18next";
 import { ThemeToggle } from "./components/ThemeToggle";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 
-import HomePage from "./components/HomePage";
-import Blog from "./components/Blog";
-// import BlogPost from "./components/BlogPost";
+import HomePage from "./pages/HomePage";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 export default function App() {
   const { t } = useTranslation();
@@ -57,12 +57,10 @@ export default function App() {
       </nav>
 
       <Routes>
-        {/* Página Inicial (Landing Page) */}
         <Route path="/" element={<HomePage isDark={isDark} />} />
 
-        {/* Blog */}
         <Route path="/blog" element={<Blog />} />
-        {/*<Route path="/blog/:slug" element={<BlogPost />} /> */}
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
     </div>
   );

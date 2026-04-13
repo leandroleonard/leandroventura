@@ -10,7 +10,7 @@ export function ThemeToggle({ isDark, onToggle }: ThemeToggleProps) {
   return (
     <motion.button
       onClick={onToggle}
-      className="fixed top-8 right-8 z-50 p-3 border border-border bg-background hover:bg-accent transition-colors"
+      className="fixed top-3 right-8 z-50 p-3 border border-border bg-background hover:bg-accent transition-colors"
       style={{ borderRadius: '0.5rem', cursor: 'pointer' }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}

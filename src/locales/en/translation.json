@@ -197,5 +197,8 @@
   },
   "footer": {
     "copyright": "© 2026 Leandro Ventura. Built with precision and purpose."
-  }
+  },
+  "loading": "Loading...",
+  "post-not-found": "Post not found",
+  "go-back": "Back"
 }

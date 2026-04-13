@@ -28,7 +28,7 @@ export default function LanguageSwitcher() {
     return (
         <motion.button
             onClick={toggleLanguage}
-            className="fixed top-8 right-[4.5rem] z-50 p-3 border border-border bg-background hover:bg-accent transition-colors flex items-center gap-2"
+            className="fixed top-3 right-[4.5rem] z-50 p-3 border border-border bg-background hover:bg-accent transition-colors flex items-center gap-2"
             style={{ borderRadius: '0.5rem', cursor: 'pointer' }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
