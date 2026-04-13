@@ -29,24 +29,92 @@
     "title": "Competências",
     "languages": {
       "title": "Linguagens",
-      "items": ["PHP", "Python", "JavaScript", "TypeScript", "C++"]
+      "items": [
+        "PHP",
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "C++"
+      ]
     },
     "frameworks": {
       "title": "Frameworks & Ferramentas",
-      "items": ["FastAPI", "Laravel", "CodeIgniter", "React", "Node.js"]
+      "items": [
+        "FastAPI",
+        "Laravel",
+        "CodeIgniter",
+        "React",
+        "Node.js"
+      ]
     },
     "systems": {
       "title": "Sistemas & Arquitetura",
-      "items": ["REST APIs", "Microservices", "Async Processing", "Message Queues"]
+      "items": [
+        "REST APIs",
+        "Microservices",
+        "Async Processing",
+        "Message Queues"
+      ]
     },
     "databases": {
       "title": "Bases de Dados",
-      "items": ["PostgreSQL", "MySQL", "Redis"]
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "Redis"
+      ]
     },
     "devops": {
       "title": "DevOps",
-      "items": ["Docker", "Linux", "Nginx"]
+      "items": [
+        "Docker",
+        "Linux",
+        "Nginx"
+      ]
     }
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "jobs": [
+      {
+        "company": "WEBTAGGER",
+        "location": "Minas Gerais, Brasil",
+        "role": "Mid. Software Developer",
+        "period": "Maio 2024 - Presente",
+        "description": "Garantir a estabilidade de um sistema de pagamentos que processa mais de um milhão de registos por mês, otimizando queries e melhorando a confiabilidade da base de dados.",
+        "achievements": [
+          "Otimizei queries complexas, reduzindo o tempo de resposta em até 80% e melhorando significativamente o desempenho do sistema.",
+          "Desenvolvi integrações de webhook para listagem automática de transações, garantindo sincronização em tempo real e eliminando erros manuais.",
+          "Realizei análise detalhada de transações usando Python para identificar inconsistências nos valores de vendas, contribuindo para relatórios financeiros precisos."
+        ],
+        "technologies": "PHP, Laravel, MySQL, PostgreSQL, Python, Linux, Git, Nginx, JavaScript, jQuery"
+      },
+      {
+        "company": "ONAKA CO.",
+        "location": "Luanda, Angola",
+        "role": "Fullstack Developer",
+        "period": "Março 2023 – Julho 2024",
+        "description": "Desenvolvi um sistema completo de agendamento para uma agência de viagens, melhorando a eficiência na gestão de clientes.",
+        "achievements": [
+          "Engenhei um sistema full-stack de agendamento usando React e CodeIgniter, reduzindo erros manuais de reservas para mais de 500 utilizadores ativos.",
+          "Desenhei e desenvolvi interfaces focadas no utilizador, melhorando a UX/UI em múltiplas plataformas.",
+          "Construí um simulador de crédito em tempo real com React e TypeScript, calculando opções de financiamento dinamicamente e aumentando a taxa de conversão de empréstimos."
+        ],
+        "technologies": "React, TypeScript, PHP, CodeIgniter, MySQL, Bootstrap, Python, React Native, Expo"
+      },
+      {
+        "company": "SOLUZI TI",
+        "location": "São Paulo, Brasil",
+        "role": "Jr. Software Developer",
+        "period": "Setembro 2021 – Novembro 2021",
+        "description": "Contribuí para o desenvolvimento de funcionalidades backend numa equipa ágil.",
+        "achievements": [
+          "Desenvolvi features backend usando Python e Docker, ganhando experiência prática com deployments containerizados e revisão de código.",
+          "Aprendi e apliquei controlo de versão com Git, incluindo criação de repositórios, gestão de branches e merging de código."
+        ],
+        "technologies": "Python, PHP, Docker, Git"
+      }
+    ]
   },
   "projects": {
     "featured": {
@@ -62,7 +130,14 @@
         "API REST construída com FastAPI para operações de alto desempenho"
       ],
       "tech_stack": "Stack Tecnológica",
-      "technologies": ["FastAPI", "Celery", "Redis", "PostgreSQL", "EfficientNet", "Docker"]
+      "technologies": [
+        "FastAPI",
+        "Celery",
+        "Redis",
+        "PostgreSQL",
+        "EfficientNet",
+        "Docker"
+      ]
     },
     "other": {
       "title": "Outros Projetos",

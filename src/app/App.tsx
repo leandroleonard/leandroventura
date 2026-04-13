@@ -273,6 +273,74 @@ class DistributedSystem {
         </div>
       </section>
 
+      {/* Professional Experience Section */}
+      <section className="py-32 px-6">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <h2 className="text-4xl mb-16" style={{ fontWeight: 600, fontSize: '2.5rem' }}>
+              {t("experience.title")}
+            </h2>
+
+            <div className="space-y-16">
+              {t("experience.jobs", { returnObjects: true }).map((job: any, index: number) => (
+                <motion.div
+                  key={index}
+                  className="border-l-4 border-primary pl-8 relative"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                    <div>
+                      <h3 className="text-2xl font-semibold" style={{ fontSize: '1.75rem' }}>
+                        {job.role}
+                      </h3>
+                      <p className="text-xl text-foreground/80 mt-1">
+                        {job.company} — {job.location}
+                      </p>
+                    </div>
+                    <p className="text-muted-foreground mt-2 md:mt-0 font-medium">
+                      {job.period}
+                    </p>
+                  </div>
+
+                  <p className="text-muted-foreground mb-6" style={{ fontSize: '1.125rem', lineHeight: 1.7 }}>
+                    {job.description}
+                  </p>
+
+                  <ul className="space-y-3 mb-8 text-muted-foreground" style={{ fontSize: '1rem' }}>
+                    {job.achievements.map((achievement: string, i: number) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="text-primary mt-1.5 text-lg leading-none">•</span>
+                        <span>{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-sm text-muted-foreground font-medium mr-2">Tecnologias:</span>
+                    {job.technologies.split(', ').map((tech: string, i: number) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 bg-secondary border border-border text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Featured Project Section */}
       <section id="projects" className="py-32 px-6">
         <div className="max-w-6xl mx-auto">
