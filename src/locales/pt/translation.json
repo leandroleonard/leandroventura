@@ -1,4 +1,10 @@
 {
+  "nav": {
+    "home": "Início",
+    "blog": "Blog",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
   "hero": {
     "role": "Engenheiro de Software | Backend & Sistemas de Alta Performance",
     "description": "Construo sistemas escaláveis, APIs e soluções inteligentes alimentadas por IA.",
@@ -177,6 +183,10 @@
       "title": "Processamento Assíncrono & Distribuído",
       "description": "Uso de filas de mensagens, pools de workers e arquitetura orientada a eventos para sistemas responsivos e resilientes."
     }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artigos sobre backend, sistemas escaláveis, performance e arquitetura de software."
   },
   "contact": {
     "title": "Vamos Construir Algo Impactante",

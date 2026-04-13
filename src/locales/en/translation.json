@@ -1,4 +1,10 @@
 {
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
   "hero": {
     "role": "Software Engineer | Backend & High-Performance Systems",
     "description": "I build scalable systems, APIs, and intelligent solutions powered by AI.",
@@ -180,6 +186,10 @@
       "title": "Async & Distributed Processing",
       "description": "Leveraging message queues, worker pools, and event-driven architecture for responsive, resilient systems."
     }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Posts about backend, scalable systems, performance, and software architecture."
   },
   "contact": {
     "title": "Let's Build Something Impactful",

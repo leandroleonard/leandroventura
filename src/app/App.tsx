@@ -7,9 +7,9 @@ import { useTranslation } from "react-i18next";
 import { ThemeToggle } from "./components/ThemeToggle";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 
-import HomePage from "./components/HomePage"; 
-// import Blog from "../pages/Blog";
-// import BlogPost from "../pages/BlogPost";
+import HomePage from "./components/HomePage";
+import Blog from "./components/Blog";
+// import BlogPost from "./components/BlogPost";
 
 export default function App() {
   const { t } = useTranslation();
@@ -52,23 +52,17 @@ export default function App() {
             <Link to="/blog" className="hover:text-primary transition-colors">
               {t("nav.blog")}
             </Link>
-            <a href="#projects" className="hover:text-primary transition-colors">
-              {t("nav.projects")}
-            </a>
-            <a href="#contact" className="hover:text-primary transition-colors">
-              {t("nav.contact")}
-            </a>
           </div>
         </div>
       </nav>
 
       <Routes>
         {/* Página Inicial (Landing Page) */}
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage isDark={isDark} />} />
 
         {/* Blog */}
-        {/* <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPost />} /> */}
+        <Route path="/blog" element={<Blog />} />
+        {/*<Route path="/blog/:slug" element={<BlogPost />} /> */}
       </Routes>
     </div>
   );
