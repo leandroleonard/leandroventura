@@ -147,10 +147,6 @@
     },
     "other": {
       "title": "Outros Projetos",
-      "micro_saas": {
-        "title": "Micro SaaS Platform",
-        "description": "Sistema de rastreamento de tendências para criadores de conteúdo. Análises em tempo real e insights para otimização de desempenho nas redes sociais."
-      },
       "enterprise": {
         "title": "Enterprise Web Systems",
         "description": "Plataformas web e APIs personalizadas para clientes empresariais. Foco em performance, segurança e arquitetura sustentável."
@@ -158,10 +154,6 @@
       "api_integration": {
         "title": "API Integration Platform",
         "description": "Gateway de API RESTful que conecta múltiplos serviços de terceiros. Implementa rate limiting, caching e estratégias de tratamento de erros."
-      },
-      "data_pipeline": {
-        "title": "Data Processing Pipeline",
-        "description": "Sistema de processamento de dados de alto desempenho que lida com milhões de registos. Processamento em batch com recuperação robusta de erros e monitorização."
       }
     }
   },
