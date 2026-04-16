@@ -150,6 +150,10 @@
     },
     "other": {
       "title": "Other Projects",
+      "micro_saas": {
+        "title": "Micro SaaS Platform",
+        "description": "Trend tracking system for content creators. Real-time analytics and insights for social media performance optimization."
+      },
       "enterprise": {
         "title": "Enterprise Web Systems",
         "description": "Custom web platforms and APIs for enterprise clients. Focus on performance, security, and maintainable architecture."
@@ -157,6 +161,10 @@
       "api_integration": {
         "title": "API Integration Platform",
         "description": "RESTful API gateway connecting multiple third-party services. Implements rate limiting, caching, and error handling strategies."
+      },
+      "data_pipeline": {
+        "title": "Data Processing Pipeline",
+        "description": "High-throughput data processing system handling millions of records. Batch processing with robust error recovery and monitoring."
       }
     }
   },

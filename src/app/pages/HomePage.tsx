@@ -430,29 +430,29 @@ class DistributedSystem {
                         </h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <motion.div
-                                className="border border-border bg-background p-8 hover:border-foreground/20 transition-colors"
-                                whileHover={{ y: -4 }}
-                                transition={{ duration: 0.3 }}
-                            >
-                                <h3 className="text-2xl mb-4" style={{ fontWeight: 600, fontSize: '1.5rem' }}>
-                                    {t("projects.other.micro_saas.title")}
-                                </h3>
-                                <p className="text-muted-foreground mb-6" style={{ fontSize: '1rem', lineHeight: 1.6 }}>
-                                    {t("projects.other.micro_saas.description")}
-                                </p>
-                                <div className="flex flex-wrap gap-2">
-                                    {["Laravel", "React.js", "MySQL", "Redis"].map((tech) => (
-                                        <span
-                                            key={tech}
-                                            className="px-3 py-1 bg-secondary border border-border"
-                                            style={{ fontSize: '0.813rem' }}
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
-                            </motion.div>
+                        {/* <motion.div
+                            className="border border-border bg-background p-8 hover:border-foreground/20 transition-colors"
+                            whileHover={{ y: -4 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <h3 className="text-2xl mb-4" style={{ fontWeight: 600, fontSize: '1.5rem' }}>
+                                {t("projects.other.micro_saas.title")}
+                            </h3>
+                            <p className="text-muted-foreground mb-6" style={{ fontSize: '1rem', lineHeight: 1.6 }}>
+                                {t("projects.other.micro_saas.description")}
+                            </p>
+                            <div className="flex flex-wrap gap-2">
+                                {["Laravel", "React.js", "MySQL", "Redis"].map((tech) => (
+                                    <span
+                                        key={tech}
+                                        className="px-3 py-1 bg-secondary border border-border"
+                                        style={{ fontSize: '0.813rem' }}
+                                    >
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+                        </motion.div> */}
 
                             <motion.div
                                 className="border border-border bg-background p-8 hover:border-foreground/20 transition-colors"
@@ -502,7 +502,7 @@ class DistributedSystem {
                                 </div>
                             </motion.div>
 
-                            <motion.div
+                            {/* <motion.div
                                 className="border border-border bg-background p-8 hover:border-foreground/20 transition-colors"
                                 whileHover={{ y: -4 }}
                                 transition={{ duration: 0.3 }}
@@ -524,7 +524,7 @@ class DistributedSystem {
                                         </span>
                                     ))}
                                 </div>
-                            </motion.div>
+                            </motion.div> */}
                         </div>
                     </motion.div>
                 </div>
